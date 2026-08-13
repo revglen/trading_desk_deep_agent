@@ -129,7 +129,7 @@ def build_graph(
     def execute_trade(state: TradingDeskState) -> dict:
         correlation_id = state["correlation_id"]
         proposal = TradeProposal.model_validate(state["proposal"])
-        verdict = RiskVerdict.model_validation(state["risk_verdict"])
+        verdict = RiskVerdict.model_validate(state["risk_verdict"])
         result: ExecutionResult =broker.submit_order(proposal, verdict, correlation_id)
         return {
             "execution_result": result.model_dump(), 
