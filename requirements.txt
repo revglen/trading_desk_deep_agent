@@ -1,0 +1,53 @@
+# Core agent framework
+deepagents>=0.5.3
+langgraph>=0.6.0
+langgraph-checkpoint-sqlite>=2.0.0
+langgraph-checkpoint-postgres>=2.0.0
+langchain>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-openai>=0.3.0
+langchain-google-genai==4.3.2
+
+# Structured data / config
+pydantic>=2.7
+pydantic-settings>=2.4
+
+# Execution (paper broker)
+alpaca-py>=0.33.0
+
+# Market data (all optional at runtime - code degrades to mock data if absent/offline)
+yfinance>=0.2.40
+
+# App-owned persistence: audit log + idempotency ledger (SQLite or Postgres,
+# see src/trading_desk/persistence/db.py) + schema migrations
+sqlalchemy>=2.0
+alembic>=1.13
+psycopg2-binary>=2.9  # Postgres driver - only exercised when DATABASE_URL is set
+
+# Observability
+structlog>=24.1
+prometheus-client>=0.20
+prometheus-fastapi-instrumentator>=7.0
+
+# API
+fastapi>=0.115
+uvicorn[standard]>=0.30
+requests==2.32.5
+email-validator>=2.0.0,<3.0.0
+gradio>=4.0.0
+
+# CLI
+typer>=0.12
+
+# Misc
+python-dotenv>=1.0
+streamlit>=1.38
+requests>=2.32
+
+# Testing
+pytest>=8.0
+pytest-mock>=3.14
+
+# UI
+streamlit>=1.38
+requests>=2.32

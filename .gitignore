@@ -1,0 +1,69 @@
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Vector store / data (regenerated from source docs, don't commit) ---
+data/chroma_db/
+data/uploads/
+*.sqlite3
+*.chroma
+
+# --- LangChain / LangSmith / LangGraph local artifacts ---
+.langchain/
+.langgraph_api/
+langgraph_checkpoints/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Docker ---
+*.pid
+
+# --- Misc build artifacts ---
+*.zip
+*.tar.gz
+data/
+.pytest_cache/
+*.sqlite
+*.sqlite-journal
