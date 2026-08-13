@@ -143,5 +143,5 @@ flowchart TD
   unexpected — to a consistent `{"error": {"code", "message",
   "request_id"}}` envelope, with a `request_id` on every response for log
   correlation.
-- Due to time pressure this document has been created with the help of Claude
+- Due to time pressure this document and the UI for this project has been created with the help of Claude
 
